@@ -79,69 +79,59 @@ Customer: Provide the customer's **total income** to calculate the tax based on 
   - Apply a **30% tax rate** on the total income.
   - If the business employs **more than 50 employees**, apply an additional **2% workforce tax** on the total income.
 
-### Test Case 1: Individual, Income Below $50,000
-**Input:**  
-- Customer Type: Individual  
-- Total Income: $40,000  
+Here are the updated test cases with simplified inputs, where the customer type is represented by a single character:
 
-**Expected Output:**  
-- Tax Rate: 10%  
-- Tax Amount: $4,000  
+Test Cases
 
-### Test Case 2: Individual, Income Between $50,001 and $100,000
-**Input:**  
-- Customer Type: Individual  
-- Total Income: $75,000  
+Test Case 1: Individual, Income Below $50,000
+	•	Input:
+I 40000
+	•	Expected Output:
+TaxRate 10
+TaxAmount 4000
 
-**Expected Output:**  
-- Tax Rate: 20%  
-- Tax Amount: $15,000  
+Test Case 2: Individual, Income Between $50,001 and $100,000
+	•	Input:
+I 75000
+	•	Expected Output:
+TaxRate 20
+TaxAmount 15000
 
-### Test Case 3: Individual, Income Above $100,000
-**Input:**  
-- Customer Type: Individual  
-- Total Income: $150,000  
+Test Case 3: Individual, Income Above $100,000
+	•	Input:
+I 150000
+	•	Expected Output:
+TaxRate 22500
+TaxAmount 22500
 
-**Expected Output:**  
-- Tax Rate: 20% on the first $100,000 + 5% on $50,000  
-- Tax Amount: (20% of $100,000) + (5% of $50,000) = $20,000 + $2,500 = $22,500  
+Test Case 4: Small Business, Income Below $250,000
+	•	Input:
+B 200000
+	•	Expected Output:
+TaxRate 15
+TaxAmount 30000
 
-### Test Case 4: Small Business, Income Below $250,000
-**Input:**  
-- Customer Type: Business (Small Business)  
-- Total Income: $200,000  
+Test Case 5: Small Business, Income Above $250,000
+	•	Input:
+B 300000
+	•	Expected Output:
+TaxRate 50000
+TaxAmount 50000
 
-**Expected Output:**  
-- Tax Rate: 15%  
-- Tax Amount: $30,000  
+Test Case 6: Corporation, No Additional Workforce Tax
+	•	Input:
+C 500000 40
+	•	Expected Output:
+TaxRate 30
+TaxAmount 150000
 
-### Test Case 5: Small Business, Income Above $250,000
-**Input:**  
-- Customer Type: Business (Small Business)  
-- Total Income: $300,000  
+Test Case 7: Corporation, With Additional Workforce Tax
+	•	Input:
+C 500000 60
+	•	Expected Output:
+TaxRate 32
+TaxAmount 160000
 
-**Expected Output:**  
-- Tax Rate: 15% on the first $250,000 + 25% on $50,000  
-- Tax Amount: (15% of $250,000) + (25% of $50,000) = $37,500 + $12,500 = $50,000  
-
-### Test Case 6: Corporation, No Additional Workforce Tax
-**Input:**  
-- Customer Type: Business (Corporation)  
-- Total Income: $500,000  
-- Number of Employees: 40  
-
-**Expected Output:**  
-- Tax Rate: 30%  
-- Tax Amount: $150,000  
-
-### Test Case 7: Corporation, With Additional Workforce Tax
-**Input:**  
-- Customer Type: Business (Corporation)  
-- Total Income: $500,000  
-- Number of Employees: 60  
-
-**Expected Output:**  
-- Tax Rate: 30% + 2% (workforce tax)  
-- Tax Amount: (30% of $500,000) + (2% of $500,000) = $150,000 + $10,000 = $160,000  
+Let me know if this meets your requirements!
 
 **Important: these questions are ChatGPT generated.**
