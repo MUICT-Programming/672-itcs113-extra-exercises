@@ -79,59 +79,84 @@ Customer: Provide the customer's **total income** to calculate the tax based on 
   - Apply a **30% tax rate** on the total income.
   - If the business employs **more than 50 employees**, apply an additional **2% workforce tax** on the total income.
 
-Here are the updated test cases with simplified inputs, where the customer type is represented by a single character:
 
-Test Cases
+## Test Cases
 
-Test Case 1: Individual, Income Below $50,000
-	•	Input:
+### Test Case 1: Individual, Income Below $50,000
+
+Input:
+```
 I 40000
-	•	Expected Output:
+```
+Expected Output:
+```
 TaxRate 10
 TaxAmount 4000
+```
 
-Test Case 2: Individual, Income Between $50,001 and $100,000
-	•	Input:
+### Test Case 2: Individual, Income Between $50,001 and $100,000
+Input:
+```
 I 75000
-	•	Expected Output:
+```
+Expected Output:
+```
 TaxRate 20
 TaxAmount 15000
+```
 
-Test Case 3: Individual, Income Above $100,000
-	•	Input:
+### Test Case 3: Individual, Income Above $100,000
+Input:
+```
 I 150000
-	•	Expected Output:
+```
+Expected Output:
+```
 TaxRate 22500
 TaxAmount 22500
+```
 
-Test Case 4: Small Business, Income Below $250,000
-	•	Input:
+### Test Case 4: Small Business, Income Below $250,000
+Input:
+```
 B 200000
-	•	Expected Output:
+```
+Expected Output:
+```
 TaxRate 15
 TaxAmount 30000
+```
 
-Test Case 5: Small Business, Income Above $250,000
-	•	Input:
+### Test Case 5: Small Business, Income Above $250,000
+Input:
+```
 B 300000
-	•	Expected Output:
+```
+Expected Output:
+```
 TaxRate 50000
 TaxAmount 50000
-
-Test Case 6: Corporation, No Additional Workforce Tax
-	•	Input:
+```
+### Test Case 6: Corporation, No Additional Workforce Tax
+Input:
+```
 C 500000 40
-	•	Expected Output:
+```
+Expected Output:
+```
 TaxRate 30
 TaxAmount 150000
+```
 
-Test Case 7: Corporation, With Additional Workforce Tax
-	•	Input:
+### Test Case 7: Corporation, With Additional Workforce Tax
+Input:
+```
 C 500000 60
-	•	Expected Output:
+```
+Expected Output:
+```
 TaxRate 32
 TaxAmount 160000
-
-Let me know if this meets your requirements!
+```
 
 **Important: these questions are ChatGPT generated.**
