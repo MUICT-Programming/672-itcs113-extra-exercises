@@ -607,3 +607,8 @@
       19 22
       43 50
       ```
+
+## Additional Resources
+
+- <https://www.w3resource.com/c-programming-exercises/>
+- <https://www.geeksforgeeks.org/c-programming-language/>
